@@ -1,6 +1,11 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+$gray-light: #777;
+$gray: #555;
+$gray-darker: #222;
+$gray-medium-light: #eaeaea;
+
 /* universal */
 body {
   padding-top: 60px;
@@ -14,12 +19,22 @@ textarea {
   resize: vertical;
 }
 
-center {
+//From
+/*center {
   text-align: center;
 }
 
 center h1 {
   margin-bottom: 10px;
+}*/
+
+//to
+center {
+  text-align: center;
+
+  h1 {
+    margin-bottom: 10px;
+  }
 }
 
 /* typography */
@@ -40,7 +55,8 @@ h2 {
   margin-bottom: 30px;
   text-align: center;
   font-weight: normal;
-  color: #777;
+  //color: #777;
+  color: $gray-light;
 }
 
 p {
@@ -49,7 +65,9 @@ p {
 }
 
 /* header */
-#logo {
+
+//FROM
+/*#logo {
   float: left;
   margin-right: 10px;
   font-size: 1.7em;
@@ -63,6 +81,23 @@ p {
 #logo:hover {
   color: #fff;
   text-decoration: none;
+}*/
+
+//to
+#logo {
+  float: left;
+  margin-right: 10px;
+  font-size: 1.7em;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  padding-top: 9px;
+  font-weight: bold;
+
+  &:hover {
+    color: white;
+    text-decoration: none;
+  }
 }
 
 //img {
@@ -70,6 +105,9 @@ p {
 //}
 
 /*footer*/
+
+//FORM
+/*
 footer {
   margin-top: 45px;
   padding-top: 5px;
@@ -97,4 +135,35 @@ footer ul {
 footer ul li {
   float: left;
   margin-left: 15px;
+}*/
+
+//TO
+
+footer {
+  margin-top: 45px;
+  padding-top: 5px;
+  border-top: 1px solid $gray-medium-light;
+  color: $gray-light;
+
+  a {
+    color: $gray;
+
+    &:hover {
+      color: $gray-darker;
+    }
+  }
+
+  small {
+    float: left;
+  }
+
+  ul {
+    float: right;
+    list-style: none;
+
+    li {
+      float: left;
+      margin-left: 15px;
+    }
+  }
 }
