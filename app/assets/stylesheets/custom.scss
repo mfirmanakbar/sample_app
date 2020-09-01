@@ -5,6 +5,7 @@ $gray-light: #777;
 $gray: #555;
 $gray-darker: #222;
 $gray-medium-light: #eaeaea;
+$state-danger-text: red;
 
 /* Begin - To make the debug output look nice */
 @mixin box_sizing {
@@ -236,4 +237,21 @@ input, textarea, select, .uneditable-input {
 
 input {
   height: auto !important;
+}
+
+#error_explanation {
+  color: red;
+
+  ul {
+    color: red;
+    margin: 0 0 30px 0;
+  }
+}
+
+.field_with_errors {
+  @extend .has-error;
+
+  .form-control {
+    color: $state-danger-text;
+  }
 }

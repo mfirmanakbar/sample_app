@@ -14,7 +14,7 @@ class UsersController < ApplicationController
     if @user.save
       # handle succces
     else
-      render new
+      render 'new'
     end
   end
 
